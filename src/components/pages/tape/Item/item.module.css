@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Shippori+Mincho+B1:wght@600;700;800&family=Source+Sans+Pro:wght@300;400&display=swap');
+.post__wrap{
+    max-width: 1200px;
+    background-color: rgb(41, 41, 41);
+    margin: 40px auto 40px;
+    padding: 20px;
+    
+    border-radius: 15px;
+}
+
+
+.title__wrap{
+    display: flex;
+    align-items: center;
+   
+
+    
+
+}
+
+a{
+    color: white;
+}
+
+.avatar img{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+
+}
+
+
+.userName{
+    font-size: 20px;
+    margin-left: 20px;
+    display: block;
+    font-family: 'Akaya Telivigala', cursive;
+}
+
+
+.PostText{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 20px;
+    color: rgb(180, 180, 180);
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    
+}
+
+.PostImage{
+    width: 100%;
+    border-radius: 8px;
+
+}
+

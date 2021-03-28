@@ -1,0 +1,28 @@
+.wrapper__img{
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    margin: 10px;
+}
+
+
+.wrapper__img img{
+    min-width: 300px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.wrapper__img::-webkit-scrollbar{
+    height: 3px;
+    color: black;
+    background: #000;
+    border-radius: 20px;
+    
+    
+}
+
+
+.wrapper__img::-webkit-scrollbar-thumb{
+    background-color: rgb(121, 121, 121);
+    border-radius: 30px;
+}

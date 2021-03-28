@@ -1,0 +1,37 @@
+.post__img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.post__wrapper{
+    max-width: 1200px;
+    border-radius: 30px;
+    margin: 30px auto;
+    padding: 20px;
+    background:  #252525;
+}
+
+
+.usertitle{
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+
+.profile__title_wrap{
+    display: flex;
+    align-items: center;
+}
+
+
+.description{
+    margin-top: 20px;
+    color: rgb(173, 173, 173);
+
+}

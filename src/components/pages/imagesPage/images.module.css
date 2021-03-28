@@ -1,0 +1,132 @@
+.inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.ItemImg img {
+    width: 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.ItemImg img:hover {
+    transform: scale(1.2);
+}
+
+.ItemImg {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slider__wrap {
+    position: fixed;
+    top: 200px;
+    z-index: 200;
+    margin-left: -300px;
+    width: 100%;
+    max-width: 600px;
+    left: 50%;
+
+
+    overflow: hidden;
+    height: 400px;
+    visibility: hidden;
+    display: none;
+}
+
+.slider__track {
+    display: flex;
+    transition: all 0.5s;
+    position: relative;
+    right: 0;
+}
+
+.slider {
+    background-color: white;
+    position: relative;
+}
+
+.slider__track div {
+    width: 100%;
+}
+
+.slider__track img {
+    width: 600px;
+}
+
+.slider__wrap.active {
+    display: block;
+    visibility: visible;
+}
+
+.opacity__modal {
+    display: none;
+}
+
+.opacity__modal.opacity {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    display: block;
+    left: 0;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    color: white;
+    z-index: 300;
+    font-size: 32px;
+    font-weight: 700;
+    position: absolute;
+    top: 45%;
+    background-color: black;
+    padding: 10px 10px;
+    padding-top: 3px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.4s;
+    user-select: none;
+}
+
+.next:hover {
+    background-color: white;
+    color: black;
+}
+.prev:hover {
+    background-color: white;
+    color: black;
+}
+
+.next {
+    right: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.prev {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+.opacity__modal div{
+    color: white;
+    font-size: 36px;
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+}
