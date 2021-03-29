@@ -2,6 +2,7 @@ import UserInfo from "./UserInfo/userInfo"
 import classes from './profile.module.css'
 import UserPost from "./userpost/userPost"
 const Profile = (props) => {
+    //Перебираю массив с постами, пришедший из пропсов
     const Post = props.data.posts.map(data => <UserPost img={data.image} avatar={data.avatar} text={data.text} name={data.name} />)
     return (
         <div>

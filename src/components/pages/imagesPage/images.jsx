@@ -1,25 +1,26 @@
 import React from 'react'
 import classes from './images.module.css'
 const ImagesPage = (props) => {
-    console.log(props.images)
+    //Перебираю массив с картинками, чтобы изначально отобразить их на странице
     let Item = props.images.galery.map(data => {
         return (
+            //OnClick тут обрабатывает отркытие модального окна со слайдером
             <div onClick={() => openModal()} className={classes.ItemImg} >
                 <img src={data.path} alt="" />
             </div>
         )
     })
     const sliderItemWidth = React.createRef()
-
+    //inner - Создает затемнение заднего фона при открытии модального окна
     const inner = React.createRef()
-
+    //Открытие модального окна со слайдером
     const openModal = () => {
         sliderRef.current.classList.add(classes.active)
         inner.current.classList.add(classes.opacity)
 
     }
     const sliderRef = React.createRef();
-
+    //Перебираю массив фотографий, пришедший из пропсов 
     let sliderItem = props.images.galery.map(data => {
         return (
             <div className={classes.sliderItemImg} ref={sliderItemWidth} >
@@ -28,7 +29,7 @@ const ImagesPage = (props) => {
         )
     })
 
-
+    //Закрытие модального окна со слайдером
     const closeModal = () =>{
         sliderRef.current.classList.remove(classes.active)
         inner.current.classList.remove(classes.opacity)

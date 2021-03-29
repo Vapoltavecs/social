@@ -3,8 +3,9 @@ import classes from './tape.module.css'
 
 import Spinner from '../../spinner/spinner'
 const TapePage = (props) => {
+    //Проверяю страницу на загрузку
     if (!TapePage) {
-        <Spinner />
+         return <Spinner />
     }
     else {
 

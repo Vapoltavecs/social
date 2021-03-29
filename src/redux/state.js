@@ -1,5 +1,8 @@
+import { rerenderTree } from "../render"
+
 let store = {
     _state: {
+        
         galery: [
             {
                 path: 'images/test.jpg'
@@ -106,6 +109,42 @@ let store = {
 
         ],
         User: {
+            textareaValue : '',
+            //Синхронизирую изменения в поле для ввода поста с хранилищем
+            changeTextareaValue(text){
+                store.getState().User.textareaValue = text
+                rerenderTree(store)
+                console.log(store.getState().User.textareaValue)
+                
+            },
+            
+            addPost(text) {
+                //Проверка на введенное сообщение(не пустое ли  оно)
+                if (text != '') {   
+                    //Создаю обьект идетичный постам, которые уже есть 
+                    let NewPost = {
+                        name: 'Слава',
+                        slug: 'slava',
+                        avatar: './images/avatar.jpg',
+                        isSubcribe: true,
+                        text: text
+                    }
+
+                    const state = store.getState()
+                    //Пушу обьект в массив с другими постами
+                    state.User.posts.push(NewPost)
+                    state.User.textareaValue = ''
+                    //Тут перерендериваю дерево после добавления поста
+
+                    rerenderTree(store)
+                }
+                else {
+                    alert('Введите текст!!!')
+                }
+
+
+
+            },
             name: 'Слава',
             avatar: './images/avatar.jpg',
             description: 'Начинающий React-frontend developer',
@@ -184,28 +223,22 @@ let store = {
 
     },
     _isRegistrated: true,
+    //Отвечает за выход и вход в аккаунт
     setRegistrated(status) {
         this._isRegistrated = status
+        rerenderTree(store)
 
     },
-    
+
     getRegistrated() {
         return this._isRegistrated
     },
     getState() {
         return this._state
     },
-    addPost(text, image){
-        this._state.User.posts.push(
-            { 
-                name: 'Слава',
-                avatar: './images/avatar.jpg',
-                image: image,
-                text: text
-            }
-        )
+    
 
-    }
+
 
 }
 

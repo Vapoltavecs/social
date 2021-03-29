@@ -1,0 +1,23 @@
+.textarea{
+    width: 50%;
+    resize: none;
+    height: 100px;
+    background: black;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    height: 200px;
+    
+    display: block;
+    outline: none;
+    color: white;
+}
+
+
+.addPost{
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: flex-end;
+}
